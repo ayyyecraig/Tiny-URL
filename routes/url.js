@@ -48,7 +48,7 @@ router.post('/shorten', async (req, res) => {
             res.status(500).json('Server Error')
         }
     } else {
-        res.status(401).json('Invalid longUrl')
+        res.status(404).json('Invalid longUrl')
     }
 })
 

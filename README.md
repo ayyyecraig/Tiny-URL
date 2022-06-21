@@ -6,9 +6,27 @@ To check out this url shortener service:
 - fork and clone 
 - npm install
 - npm run dev
+------
+
+## Making your Post Request with a HTTP API client.
+
+URL POST Request : http://localhost:4000/api/url/shorten
+
+Header: Content-Type  
+Value: application/Json 
+
+### Long URL's to test 
+- https://www.codedge.io 
+
+- https://www.amazon.com/stores/node/20648519011?channel=discovbar?field-lbr_brands_browse-bin=AmazonBasics&ref_=nav_cs_amazonbasics
+
+--------
+### Returns our UrlModel and the shortUrl is what we are testing for our GET request on any web browser.
 
 
 
+
+---------
 
 ## Languages & Technologies used 
 - JavaScript
@@ -16,8 +34,10 @@ To check out this url shortener service:
 - Express
 - MongoDB 
 - Vs Code
-- Insomnia or Postman
+- Insomnia or Postman/ then returned shortened URL is tested thru any web browser. 
 
+
+----------
 
 ### Command Prompts and Dependencies 
  - npm init -y
