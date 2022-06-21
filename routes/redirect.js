@@ -1,25 +1,23 @@
-const express = require('express')
+const express = require("express");
 
-const router = express.Router()
+const router = express.Router();
 
-const Url = require('../models/UrlModel')
+const Url = require("../models/UrlModel");
 
-router.get('/:code', async (req, res) => {
-    try {
-        const url = await Url.findOne({
-            urlCode: req.params.code 
-        })
-        if (url){
-            return res.redirect(url.longUrl)
-        } else {
-            return res.status(404).json('not_found')
-        }
+router.get("/:code", async (req, res) => {
+  try {
+    const url = await Url.findOne({
+      urlCode: req.params.code,
+    });
+    if (url) {
+      return res.redirect(url.longUrl);
+    } else {
+      return res.status(404).json("not_found");
     }
+  } catch (err) {
+    console.error(err);
+    res.status(500).json("Server Error");
+  }
+});
 
-    catch (err) {
-        console.error(err)
-        res.status(500).json('Server Error')
-    }
-})
-
-module.exports = router
+module.exports = router;

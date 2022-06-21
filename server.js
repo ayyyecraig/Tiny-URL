@@ -1,16 +1,14 @@
 const express = require("express");
-const mongoose = require('mongoose')
+const mongoose = require("mongoose");
 const app = express();
 
 /// database
-const DB_URI = 'mongodb://localhost:27017/urlshortner'
+const DB_URI = "mongodb://localhost:27017/urlshortner";
 
 mongoose.connect(DB_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology:true
-})
-
-
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 
 // routes
 
