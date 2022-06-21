@@ -4,7 +4,8 @@
   "description": "When posting on social media, character limits can be a real pain. Why not save precious characters with a URL shortener?",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",
