@@ -9,7 +9,7 @@ const router = express.Router()
 const Url = require('../models/UrlModel') 
 
 
-const baseUrl = 'http:localhost:5000'
+const baseUrl = 'http:localhost:4000'
 
 router.post('/shorten', async (req, res) => {
     const {
@@ -17,7 +17,7 @@ router.post('/shorten', async (req, res) => {
     } = req.body 
 
     if (!validUrl.isUri(baseUrl)){
-        return res.status(401).json('Invalid base URL')
+        return res.status(400).json('missing_URL')
     }
 
 // If url is valid, create url code 
@@ -43,7 +43,7 @@ router.post('/shorten', async (req, res) => {
                 res.json(url)
             }
         }
-        catch (err) {
+        catch (error) {
             console.log(error)
             res.status(500).json('Server Error')
         }

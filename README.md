@@ -16,7 +16,7 @@ To check out this url shortener service:
 - Express
 - MongoDB 
 - Vs Code
-- Insomnia 
+- Insomnia or Postman
 
 
 ### Command Prompts and Dependencies 
